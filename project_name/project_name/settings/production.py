@@ -1,6 +1,8 @@
 from .base import *
 
-DEBUG = TEMPLATE_DEBUG = False
+import os
+
+DEBUG = TEMPLATE_DEBUG = os.getenv('DJANGO_DEBUG', False)
 
 INSTALLED_APPS += [
 	'gunicorn',
