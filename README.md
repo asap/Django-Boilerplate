@@ -4,7 +4,22 @@ This file should be overwritten after a new project is created.
 
 ## Installation
 
+### New project creation
+
     $ django-admin.py startproject [name] . --template=/path/to/Django-Boilerplate -n Procfile,.gitignore,*.py
+
+### Virtual environment configuration
+
+    $ cd scripts
+    $ fab
+
+Additional information can be found by running `$ fab --list`
+
+_From the commit logs:_
+
+> This is a fabric script that can be used to create and initialize a virtual environment. In order for the script to work, virtualenv, virtualenvwrapper, and fabric must be installed.
+
+    $ pip install -U virtualenv virtualenvwrapper fabric
 
 ## Heroku
 
@@ -15,10 +30,12 @@ This file should be overwritten after a new project is created.
 
 ### Deployment
 
-Production
+_Production_
+
     $ git push heroku master
 
-Staging
+_Staging_
+
     $ git push staging staging:master
 
 For further reading, see [Managing Multiple Environemnts for an App](https://devcenter.heroku.com/articles/multiple-environments)
